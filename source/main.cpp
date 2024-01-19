@@ -37,7 +37,7 @@ int main(void) {
 	draw(status, 0);   
 	draw_loop(status); 
     
-    endwin();
+	endwin();
 	
 	// Zwalnianie pamięci
 	delete(plansza->pola);
