@@ -1,0 +1,73 @@
+# Project: ncurses project
+# Makefile created by Embarcadero Dev-C++ 6.3
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = napisy.o main.o kolory.o draw/draw.o draw/mmenu.o draw/wysrodkowanie.o draw/opcje.o gracore/restart.o gracore/gameresult.o gracore/oznacz.o gracore/input.o draw/gra.o gracore/ruch.o gracore/pobliskiepola.o gracore/inicjalizacja.o gracore/sprawdz.o
+LINKOBJ  = napisy.o main.o kolory.o draw/draw.o draw/mmenu.o draw/wysrodkowanie.o draw/opcje.o gracore/restart.o gracore/gameresult.o gracore/oznacz.o gracore/input.o draw/gra.o gracore/ruch.o gracore/pobliskiepola.o gracore/inicjalizacja.o gracore/sprawdz.o
+LIBS     = -L"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/lib" -L"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -lncursesw -g3
+INCS     = -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/include" -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/x86_64-w64-mingw32/include" -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/include" -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/x86_64-w64-mingw32/include" -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
+BIN      = "ncurses project.exe"
+CXXFLAGS = $(CXXINCS) -g3 -g
+CFLAGS   = $(INCS) -g3 -g
+DEL      = F:\!pobrane\Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable\Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable\devcpp.exe INTERNAL_DEL
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${DEL} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+napisy.o: napisy.cpp
+	$(CPP) -c napisy.cpp -o napisy.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+kolory.o: kolory.cpp
+	$(CPP) -c kolory.cpp -o kolory.o $(CXXFLAGS)
+
+draw/draw.o: draw/draw.cpp
+	$(CPP) -c draw/draw.cpp -o draw/draw.o $(CXXFLAGS)
+
+draw/mmenu.o: draw/mmenu.cpp
+	$(CPP) -c draw/mmenu.cpp -o draw/mmenu.o $(CXXFLAGS)
+
+draw/wysrodkowanie.o: draw/wysrodkowanie.cpp
+	$(CPP) -c draw/wysrodkowanie.cpp -o draw/wysrodkowanie.o $(CXXFLAGS)
+
+draw/opcje.o: draw/opcje.cpp
+	$(CPP) -c draw/opcje.cpp -o draw/opcje.o $(CXXFLAGS)
+
+gracore/restart.o: gracore/restart.cpp
+	$(CPP) -c gracore/restart.cpp -o gracore/restart.o $(CXXFLAGS)
+
+gracore/gameresult.o: gracore/gameresult.cpp
+	$(CPP) -c gracore/gameresult.cpp -o gracore/gameresult.o $(CXXFLAGS)
+
+gracore/oznacz.o: gracore/oznacz.cpp
+	$(CPP) -c gracore/oznacz.cpp -o gracore/oznacz.o $(CXXFLAGS)
+
+gracore/input.o: gracore/input.cpp
+	$(CPP) -c gracore/input.cpp -o gracore/input.o $(CXXFLAGS)
+
+draw/gra.o: draw/gra.cpp
+	$(CPP) -c draw/gra.cpp -o draw/gra.o $(CXXFLAGS)
+
+gracore/ruch.o: gracore/ruch.cpp
+	$(CPP) -c gracore/ruch.cpp -o gracore/ruch.o $(CXXFLAGS)
+
+gracore/pobliskiepola.o: gracore/pobliskiepola.cpp
+	$(CPP) -c gracore/pobliskiepola.cpp -o gracore/pobliskiepola.o $(CXXFLAGS)
+
+gracore/inicjalizacja.o: gracore/inicjalizacja.cpp
+	$(CPP) -c gracore/inicjalizacja.cpp -o gracore/inicjalizacja.o $(CXXFLAGS)
+
+gracore/sprawdz.o: gracore/sprawdz.cpp
+	$(CPP) -c gracore/sprawdz.cpp -o gracore/sprawdz.o $(CXXFLAGS)
