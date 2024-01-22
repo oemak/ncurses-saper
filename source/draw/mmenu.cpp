@@ -4,7 +4,7 @@
 
 #include "wysrodkowanie.h"
 #include "strony.h"
-#include "../napisy.h"
+#include "napisy.h"
 #include "../status.h"
 
 int draw_mmenu(status_gry *status, int x) {

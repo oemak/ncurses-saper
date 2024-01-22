@@ -1,7 +1,7 @@
 #include <ncursesw/curses.h>
 
 #include "../status.h"
-#include "../napisy.h"
+#include "napisy.h"
 #include "wysrodkowanie.h"
 #include "strony.h"
 #include "../gracore/input.h"

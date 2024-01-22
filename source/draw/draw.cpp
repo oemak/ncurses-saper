@@ -1,7 +1,7 @@
 #include <ncursesw/curses.h>
 
 #include "../status.h"
-#include "../napisy.h"
+#include "napisy.h"
 #include "strony.h"
 
 int draw(status_gry *status, int x) {

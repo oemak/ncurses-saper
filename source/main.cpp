@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ncursesw/curses.h>
 
-#include "kolory.h"
+#include "draw/kolory.h"
 #include "draw/draw.h"
 #include "status.h"
 #include "gracore/restart.h"
