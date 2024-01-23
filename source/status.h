@@ -33,7 +33,7 @@ struct Plansza {
 
 struct status_gry {
 	DrawPage page;
-	DrawPage last_page;
+	int page_selection;
 	Plansza *plansza;
 };
 
