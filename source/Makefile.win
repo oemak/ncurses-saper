@@ -4,8 +4,8 @@
 CPP      = g++.exe -D__DEBUG__
 CC       = gcc.exe -D__DEBUG__
 WINDRES  = windres.exe
-OBJ      = napisy.o main.o kolory.o draw/draw.o draw/mmenu.o draw/wysrodkowanie.o draw/opcje.o gracore/restart.o gracore/gameresult.o gracore/oznacz.o gracore/input.o draw/gra.o gracore/ruch.o gracore/pobliskiepola.o gracore/inicjalizacja.o gracore/sprawdz.o
-LINKOBJ  = napisy.o main.o kolory.o draw/draw.o draw/mmenu.o draw/wysrodkowanie.o draw/opcje.o gracore/restart.o gracore/gameresult.o gracore/oznacz.o gracore/input.o draw/gra.o gracore/ruch.o gracore/pobliskiepola.o gracore/inicjalizacja.o gracore/sprawdz.o
+OBJ      = main.o draw/draw.o draw/mmenu.o draw/wysrodkowanie.o draw/opcje.o gracore/restart.o gracore/gameresult.o gracore/oznacz.o gracore/input.o draw/gra.o gracore/ruch.o gracore/pobliskiepola.o gracore/inicjalizacja.o gracore/sprawdz.o draw/napisy.o draw/kolory.o
+LINKOBJ  = main.o draw/draw.o draw/mmenu.o draw/wysrodkowanie.o draw/opcje.o gracore/restart.o gracore/gameresult.o gracore/oznacz.o gracore/input.o draw/gra.o gracore/ruch.o gracore/pobliskiepola.o gracore/inicjalizacja.o gracore/sprawdz.o draw/napisy.o draw/kolory.o
 LIBS     = -L"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/lib" -L"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc -lncursesw -g3
 INCS     = -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/include" -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/x86_64-w64-mingw32/include" -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/include" -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/x86_64-w64-mingw32/include" -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"F:/!pobrane/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/Embarcadero_Dev-Cpp_6.3_TDM-GCC_9.2_ncursesw_64_Portable/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
@@ -24,14 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-napisy.o: napisy.cpp
-	$(CPP) -c napisy.cpp -o napisy.o $(CXXFLAGS)
-
 main.o: main.cpp
 	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
-
-kolory.o: kolory.cpp
-	$(CPP) -c kolory.cpp -o kolory.o $(CXXFLAGS)
 
 draw/draw.o: draw/draw.cpp
 	$(CPP) -c draw/draw.cpp -o draw/draw.o $(CXXFLAGS)
@@ -71,3 +65,9 @@ gracore/inicjalizacja.o: gracore/inicjalizacja.cpp
 
 gracore/sprawdz.o: gracore/sprawdz.cpp
 	$(CPP) -c gracore/sprawdz.cpp -o gracore/sprawdz.o $(CXXFLAGS)
+
+draw/napisy.o: draw/napisy.cpp
+	$(CPP) -c draw/napisy.cpp -o draw/napisy.o $(CXXFLAGS)
+
+draw/kolory.o: draw/kolory.cpp
+	$(CPP) -c draw/kolory.cpp -o draw/kolory.o $(CXXFLAGS)
